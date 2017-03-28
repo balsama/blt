@@ -160,10 +160,10 @@ class Plugin implements PluginInterface, EventSubscriberInterface {
 
       if ($this->isNewProject()) {
         // The BLT command will not work at this point because the .git dir doesn't exist yet.
-        $success = $this->executeCommand($this->getVendorPath() . '/acquia/blt/blt.sh create-project', [], TRUE);
+        $success = $this->executeCommand($this->getVendorPath() . '/phing/phing/bin/phing create-project', [], TRUE);
       }
       else {
-        $success = $this->executeCommand($this->getVendorPath() . '/acquia/blt/blt.sh add-to-project', [], TRUE);
+        $success = $this->executeCommand($this->getVendorPath() . '/phing/phing/bin/phing add-to-project', [], TRUE);
       }
     }
     elseif ($options['blt']['update']) {
