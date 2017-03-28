@@ -49,8 +49,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
   # Install (new) alias
   echo "Installing blt alias"
-  yes | ./vendor/phing/phing/bin/phing install-alias
-  ./vendor/phing/phing/bin/phing init
+  yes | ./vendor/acquia/blt/blt.sh install-alias
+  ./vendor/acquia/blt/blt.sh init
   composer update
 
   echo "Update complete. Please do the following:"
